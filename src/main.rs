@@ -7,7 +7,7 @@ use tokio;
 async fn main() {
     dotenv().ok();
 
-    let token: String = std::env::var("TOKEN").expect("Failed to get token.");
+    let token: String = std::env::var("PIHOLE_TOKEN").expect("Failed to get token.");
 
     let args: Vec<String> = env::args().collect();
     if args.len() > 1 {
